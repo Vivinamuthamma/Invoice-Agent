@@ -33,12 +33,14 @@ The system consists of three main components:
 - Generates summary reports with discrepancy highlighting
 - Tracks approval status of invoices
 
-### 3. Test Script (`test_invoice_system.py`)
 
-- Demonstrates how to use the system
-- Provides examples of database operations
-- Shows how to validate invoices
-- Illustrates report generation
+### 3. Approver Interface
+
+- Allows approvers to review validation reports
+- Displays discrepancies between invoices and purchase orders
+- Provides options to approve or reject invoices
+- Updates the database with the approver's decision
+- Sends notifications to relevant stakeholders
 
 ## Setup
 
@@ -107,14 +109,6 @@ monitor = InvoiceMonitor()
 
 # Start monitoring
 monitor.monitor_mailbox()
-```
-
-### Running the Test Script
-
-To test the system without connecting to an email server:
-
-```
-python test_invoice_system.py
 ```
 
 ## Workflow
